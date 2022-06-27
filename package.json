@@ -1,7 +1,7 @@
 {
   "name": "portafolio",
   "version": "0.0.0",
-  "homepage": "https:/crisjgc.github.io/angular-web-personal",
+  "homepage": "https://crisjgc.github.io/angular-web-personal",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
