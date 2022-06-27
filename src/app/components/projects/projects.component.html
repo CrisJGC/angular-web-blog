@@ -1,0 +1,16 @@
+<div class="contInfo">
+    <h2>Proyectos</h2>
+    <p>En esta seccion colocamos nuestros proyectos, en este caso se encientran a partir de un servidor backend que desarrolle
+        por separado, pero se puede agregar tu propia api, o simplemente manejarlo como si fuera una galeria de imagenes, 
+        todo depende de como lo quieras hablar o llenarlo de enlaces a tus trabajos publicados.
+    </p>
+    <ul class="projectUl">
+        <li *ngFor="let project of projects" class="projectLi">
+            <a [routerLink]="['/project', project._id]">
+                <img src="{{url+'get-image/'+project.image}}" *ngIf="project.image" />
+                <h3>{{project.name}}</h3>
+                <p>{{project.catego}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

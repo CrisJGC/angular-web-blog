@@ -1,0 +1,42 @@
+<div id="containerP">
+    <h2>{{title}}</h2>
+
+    <div class="message success" *ngIf="status == 'success'">
+        El proyecto se ha creado correctamente
+    </div>
+    <div class="message failed" *ngIf="status == 'failed'">
+        El proyecto NO SE HA PODIDO CREAR
+    </div>
+
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+        <p>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required>
+            <span *ngIf="name.touched && !name.valid">Campo oligatorio: Nombre</span>
+        </p>
+        <p>
+            <label for="description">Descripción</label>
+            <input type="textarea" name="description" #description="ngModel" [(ngModel)]="project.description" required>
+            <span *ngIf="description.touched && !description.valid">Campo oligatorio: Descripcion</span>
+        </p>
+        <p>
+            <label for="catego">Categoria</label>
+            <input type="text" name="catego" #catego="ngModel" [(ngModel)]="project.catego" required>
+            <span *ngIf="catego.touched && !catego.valid">Campo oligatorio: Categoria</span>
+        </p>
+        <p>
+            <label for="tech">Tecnologias</label>
+            <input type="text" name="tech" #tech="ngModel" [(ngModel)]="project.tech" required>
+            <span *ngIf="tech.touched && !tech.valid">Campo oligatorio: Tecnologias</span>
+        </p>
+        <p>
+            <label for="year">Año de creacion</label>
+            <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year">
+        </p>
+        <p>
+            <label for="image">Imagen</label>
+            <input type="file" name="image" placeholder="subir imagen" (change)="fileChangeEvent($event)" >
+        </p>
+        <input type="submit" value="Enviar" [disabled]="!projectForm.form.valid">
+    </form>
+</div>

@@ -1,0 +1,27 @@
+<div class="contInfo">
+    <div class="message success" *ngIf="status == 'success'" >
+        Tu mensaje ha sido enviado
+    </div>
+    <div class="message failed" *ngIf="status == 'failed'">
+        No se ha recibido tu mensaje, OH NO!
+    </div>
+
+    <form method="POST" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+        <p>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="contact.name" required>
+            <span *ngIf="name.touched && !name.valid"> Campo Obligatorio</span>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="text" name="email" #email="ngModel" [(ngModel)]="contact.email" required>
+            <span *ngIf="email.touched && !email.valid"> Campo Obligatorio</span>
+        </p>
+        <p>
+            <label for="message">Mensaje</label>
+            <input type="text" name="message" #message="ngModel" [(ngModel)]="contact.message" required>
+            <span *ngIf="message.touched && !message.valid"> Campo Obligatorio</span>
+        </p>
+        <input id="buttonCont" type="submit" value="Enviar" [disabled]="!contactForm.form.valid">
+    </form>
+</div>

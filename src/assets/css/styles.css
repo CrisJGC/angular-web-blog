@@ -1,0 +1,312 @@
+/* generales */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif,Arial, Helvetica;
+    list-style: none;
+    text-decoration: none !important;
+}
+body{
+    background-color:#0e1212 !important;
+    color:  #dbdbdb !important;
+    background-attachment: fixed;
+}
+body .morado{
+    color: #8711c1;
+}
+body .verde{
+    color: #20A39E;
+}
+
+/* nav cabecera */
+nav{
+    display: block !important;
+    color: #20A39E  !important;
+    background-color: #0e1212;
+}
+
+nav img{
+    margin-right: 15px;
+}
+nav #nombrePersonal{
+    margin-right: 20px;
+}
+nav .nav-visited{
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #20A39E;
+    transition: all .4s;
+}
+nav .nav-visited:focus{
+    color: #555;
+    transform: scale(1.2);
+}
+nav .nav-visited:hover{
+    color: #8711c1;
+    transform: scale(1.2);
+}
+
+/* General contenedor */
+.containerGeneral{
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 50px;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+
+.containerGeneral #document{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* seccion about-me */
+ .contInfo {
+    margin-top: 100px;
+}
+.contInfo #title-about{
+    color: #dbdbdb;
+    font-size: 48px;
+}
+.contInfo #div-about{
+    margin-left: 20px;
+}
+.contInfo #about-img{
+    display: inline;
+    float: right;
+    border: 1px #0e1212 solid;
+    box-shadow:  inset 16px 16px 16px #0e1212, inset 4px 4px 8px #0e1212, inset 2px 2px 4px #0e1212;
+}
+.contInfo img{
+    display: block;
+    position: relative;
+    width: 350px;
+    opacity: .7;
+    z-index: -1;
+}
+.contInfo #name{
+    color: #20A39E;
+    font-size: 36px;
+}
+.contInfo #about{
+    color: #555;
+    font-size: 24px;
+}
+footer{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    background: #1a1d1d;
+    color: #dbdbdb;
+}
+footer p{
+    margin: 0 auto;
+}
+
+#hobby{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+#hobby svg{
+    cursor: pointer;
+}
+
+/* img */
+#cafe{
+    background:url('../../assets/img/cafe.png');
+    background-size:cover;
+    width: 200px;
+    height: 200px;
+    display:block;
+    margin-bottom: 40px;
+}
+#cook{
+    background:url('../../assets/img/cocinando.png');
+    background-size:cover;
+    width: 200px;
+    height: 200px;
+    display:block;
+    margin-bottom: 40px;
+}
+#workout{
+    background:url('../../assets/img/yo-no-fit.jpg');
+    background-size:cover;
+    width: 200px;
+    height: 200px;
+    display:block;
+    margin-bottom: 40px;
+    fill: black;
+}
+#videogames{
+    background:url('../../assets/img/consola-de-juego.png');
+    background-size:cover;
+    width: 200px;
+    height: 200px;
+    display:block;
+    margin-bottom: 40px;
+}
+#read{
+    background:url('../../assets/img/leyendo.png');
+    background-size:cover;
+    width: 200px;
+    height: 200px;
+    display:block;
+    margin-bottom: 40px;
+}
+  
+text{
+      font-size:24px;
+      transition:font-size .5s ease-out;
+      font-weight:900;
+      
+}
+
+svg:hover text{
+    transition:font-size .4s ease-in;
+    font-size: 1500px;
+  }
+
+
+  /* crear proyectos */
+#containerP{
+    padding: 50px;
+}
+#containerP h2{
+    border-bottom: 1px solid #20A39E;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+}
+form{
+    width: 80%;
+}
+form label{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+form input{
+    width: 45%;
+    padding: 5px;
+}
+form button,
+form input[type="submit"]{
+    display: block;
+    width: 40%;
+    font-size: 16px;
+    padding: 7px;
+    margin-top: 15px;
+    color: #dbdbdb;
+    background: #20A39E;
+    border: 1px solid #20A39E;
+    cursor: pointer;
+}
+form button:hover,
+form input[type="submit"]:hover{
+    background: rgba(2, 128, 144, 0.8);
+    border: 1px solid #20A39E;
+}
+form input[disabled]{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+form span{
+    padding: 15px;
+    color: crimson;
+}
+
+/* mensaje crear proyectos */
+
+.message {
+    width: 50%;
+    padding: 5px;
+} 
+.success{
+    color: #20A39E;
+}
+.failed{
+    color: #8711c1;
+}
+
+/* proyectos */
+.contInfo h2{
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+.projectUl{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    color: #20A39E;
+    gap: 20px;
+} 
+.projectLi img{
+    width: 250px;
+    height: 150px;
+}
+.projectLi a{
+    color: #20A39E;
+}
+.projectLi a:hover,
+.projectLi a:visited{
+    color: #20A39E;
+}
+/* detalle proyecto */
+.flex {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    color: #dbdbdb;
+}
+.flex img{
+    width: 400px;
+    height: 280px;
+}
+
+/* formulario de contacto */
+
+form #buttonCont{
+    margin-top: 50px;
+}
+
+/* blog  */
+.wrap{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    color: #dbdbdb;
+}
+.wrap .card-blog{
+    background-color: #1a1d1d;
+}
+.wrap .card-blog:hover{
+    transform: scale(1.05);
+    transition: all .2s ease-in-out;
+}
+.wrap h2{
+    font-size: 24px;
+    text-align: center;
+}
+.wrap .catego{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2px;
+}
+.wrap img{
+    width: 80%;
+    height: 180px;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 20;
+    margin-bottom: 20px;
+}
+.wrap p{
+    padding: 0 20px;
+    text-align: justify;
+}
