@@ -1,6 +1,6 @@
 # Portafolio
 
-So the best you can do here is, clone this repo and check-it, there is a github pages, but only said run the command and use it, so yeah... just clone it.
+https://crisjgc-github-io.vercel.app/about-me 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
